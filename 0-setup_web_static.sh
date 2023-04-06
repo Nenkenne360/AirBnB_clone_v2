@@ -1,12 +1,9 @@
 #!/usr/bin/env bash
-# Installs Nginx if not installed
-#+ Creates folders /data/web_static/shared
-#+	and /adta/releases/test if not exists
-#+ /data/web_static/current linked to
-#+ /data/web_static/releases/test/
-#+ Creates an /data/web_static/releases/test/index.html
-#+ Configures Nginx to serve /data/web_static/current/ 
-#+	to hbnb_static
+# Installs Nginx web server if it is not already installed.
+#+ Creates two directories /data/web_static/shared and /data/releases/test if they don't already exist.
+#+ Creates a symbolic link /data/web_static/current that points to /data/web_static/releases/test/.
+#+ Creates an HTML file named index.html in the /data/web_static/releases/test directory.
+#+ Configures Nginx web server to serve the content of /data/web_static/current/ directory to the URL path hbnb_static.
 
 sudo apt-get -y update
 sudo apt-get -y upgrade
